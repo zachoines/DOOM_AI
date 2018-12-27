@@ -28,10 +28,10 @@ import gym
 import vizdoomgym
 
 env = gym.make('VizdoomCorridor-v0')
-env = gym.wrappers.Monitor(env, "Doom/videos", video_callable=lambda episode_id: True,force=True)
+# env = gym.wrappers.Monitor(env, "Doom/videos", video_callable=lambda episode_id: True,force=True)
 
 done = True
-for step in range(10):
+for step in range(5000):
     if done:
         state = env.reset()
     state, reward, done, info = env.step(env.action_space.sample())
