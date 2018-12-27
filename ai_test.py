@@ -26,10 +26,9 @@ import gym
 from gym import wrappers
 import gym
 import vizdoomgym
-from frame_skipping import SkipWrapper
 
 env = gym.make('VizdoomCorridor-v0')
-env = gym.wrappers.Monitor(env, "./vid", video_callable=lambda episode_id: True,force=True)
+env = gym.wrappers.Monitor(env, "Doom/videos", video_callable=lambda episode_id: True,force=True)
 
 done = True
 for step in range(10):

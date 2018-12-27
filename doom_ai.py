@@ -127,7 +127,7 @@ class AI:
 
 # Getting the Doom environment
 doom_env = image_preprocessing.PreprocessImage(doom_env, width = 80, height = 80, grayscale = True)
-doom_env = wrappers.Monitor(doom_env, "doom_videos", force = True,)
+doom_env = wrappers.Monitor(doom_env, "doom_videos", force = True)
 number_actions = doom_env.action_space.n
 
 # Building an AI
